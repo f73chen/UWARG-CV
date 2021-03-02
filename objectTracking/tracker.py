@@ -21,7 +21,7 @@ if __name__ == '__main__':
         tracker = cv2.TrackerCSRT_create()
 
     # Read video
-    video = cv2.VideoCapture('./race.mp4')
+    video = cv2.VideoCapture(0)
 
     # Exit if video not opened.
     if not video.isOpened():
@@ -30,12 +30,13 @@ if __name__ == '__main__':
 
     # Read first frame.
     ok, frame = video.read()
+    ok, frame = video.read()
     if not ok:
         print('Cannot read video file')
         sys.exit()
 
     # Define an initial bounding box
-    bbox = (287, 23, 86, 320)
+    #bbox = (287, 23, 86, 320)
 
     # Uncomment the line below to select a different bounding box
     bbox = cv2.selectROI(frame, False)
