@@ -1,3 +1,4 @@
+#to run python3 ./detect.py --weights ./weights/best.pb --img 416 --conf 0.4 --source 0 --classes 0
 import argparse
 import time
 from pathlib import Path
